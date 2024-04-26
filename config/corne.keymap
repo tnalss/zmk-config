@@ -46,13 +46,13 @@
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |   SHFT       |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |     /    | ` | ALT  |
 // '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
-//                                   |  GUI   |   MO1   |   ENT   |       |  SPC  |   BKSP  |  CAPS   |
+//                                   |  GUI   |   MO1   |   SPC   |       |   ENT |   BKSP  |  LALT   |
 //                                   '--------+---------+---------'       '-------+---------+---------'
                         bindings = <
    &kp ESC        &kp Q       &kp W      &kp E     &kp R           &kp T   &kp Y  &kp U           &kp I        &kp O     &kp P      &kp BACKSLASH
    &mt LCTRL TAB  &kp A       &kp S      &kp D     &kp F           &kp G   &kp H  &kp J           &kp K        &kp L     &kp SEMI   &kp SQT
    &kp LSHFT      &kp Z       &kp X      &kp C     &kp V           &kp B   &kp N  &kp M           &kp COMMA    &kp DOT   &kp FSLH   &mt RALT GRAVE
-                  &kp LGUI    &mo 1      &lt NAVI RET              &kp SPACE       &kp BSPC    &kp CAPSLOCK
+                  &kp LGUI    &mo 1      &lt NAVI SPACE            &kp RET       &kp BSPC         &kp RALT
                         >;
                 };
                 
@@ -105,7 +105,7 @@
 //                             '--------+---------+---------'       '--------+--------+---------'
 
                         bindings = <
-   &sys_reset      &trans          &trans         &trans          &trans          &trans            &kp C_VOLUME_UP    &trans &trans &trans &trans &sys_reset
+   &sys_reset      &trans          &trans         &trans          &trans          &trans            &kp C_VOLUME_UP    &mkp LCK &trans &mkp RCLK &trans &sys_reset
    &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &kp C_VOLUME_DOWN  &trans &trans &trans &trans &trans
    &trans      &trans          &trans         &trans          &trans          &trans            &trans             &trans &trans &trans &trans &trans
                                    &trans &trans &trans   &trans &trans &trans
