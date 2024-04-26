@@ -10,6 +10,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
+
+#define QWERTY 0
+#define NUMB 1
+#define NAVI 2
+#define ADJUST 3
+
+
 &led_strip { chain-length = <27>; };
 
 / {
@@ -26,7 +33,7 @@
         bindings = <&kp>, <&kp>;
         };
     };
-    
+
         keymap {
                 compatible = "zmk,keymap";
 
