@@ -20,7 +20,6 @@
 / {
     behaviors {
         hm: homerow_mods {
-<<<<<<< HEAD
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
@@ -28,15 +27,6 @@
         quick_tap_ms = <0>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
-=======
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
->>>>>>> 6a0190bf5dadd5c6640e729db6be1de789ab47d7
         };
     };
 
@@ -54,41 +44,12 @@
             //                                   |  GUI   |   MO1   |   SPC   |       |   ENT |   BKSP  |  LALT   |
             //                                   '--------+---------+---------'       '-------+---------+---------'
 
-<<<<<<< HEAD
-                        bindings = <
-   &kp LG(LS(N4))  &trans     &kp PAGE_UP        &kp UP_ARROW      &kp PAGE_DOWN       &kp HOME                &kp CARET            &kp PAGE_UP             &kp UP_ARROW       &kp PAGE_DOWN      &kp HOME     &kp LG(LS(N4))
-   &trans          &trans     &kp LEFT_ARROW     &kp DOWN_ARROW    &kp RIGHT_ARROW     &kp END                 &kp MINUS            &kp LEFT_ARROW          &kp DOWN_ARROW     &kp RIGHT_ARROW    &kp END      &trans
-   &out OUT_TOG    &trans     &trans             &trans            &kp LC(LEFT_ARROW)  &kp DEL     &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)     &trans             &trans             &trans       &out OUT_TOG
-                              &kp LGUI           &mo ADJUST        &trans              &trans     &trans   &trans
-                        >;
-                };
-
-                adjust_layer {
-// .--------------------------------------------------------.       .--------------------------------------------------------------.
-// |         |        |        |        |         |         |       |  VOL+  |        |         |         |          |             |
-// |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-// |  BTCLR  |  BT1   |  BT2   |  BT3   |  BT4    |  BT5    |       |  VOL-  |        |         |         |          |             |
-// |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-// |         |        |        |        |         |         |       |        |        |         |         |          |             |
-// '---------------------------+--------+---------+---------+       |--------+--------+---------+----------------------------------'
-//                             |        |         |         |       |        |        |         |
-//                             '--------+---------+---------'       '--------+--------+---------'
-
-                        bindings = <
-   &sys_reset      &trans          &trans         &trans          &trans          &trans        &kp C_VOLUME_UP    &mkp LCLK &trans &mkp RCLK &trans &sys_reset
-   &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &kp C_VOLUME_DOWN  &trans &trans &trans &trans &trans
-   &trans      &trans          &trans         &trans          &trans          &trans            &trans             &trans &trans &trans &trans &trans
-                                   &trans &trans &trans   &trans &trans &trans
-                        >;
-                };
-=======
             bindings = <
 &kp ESC        &kp Q  &kp W  &kp E     &kp R  &kp T             &kp Y    &kp U     &kp I      &kp O    &kp P     &kp BACKSLASH
 &mt LCTRL TAB  &kp A  &kp S  &kp D     &kp F  &kp G             &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z  &kp X  &kp C     &kp V  &kp B             &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RALT GRAVE
                              &kp LGUI  &mo 1  &lt NAVI SPACE    &kp RET  &kp BSPC  &kp RALT
             >;
->>>>>>> 6a0190bf5dadd5c6640e729db6be1de789ab47d7
         };
 
         lower_layer {
@@ -116,7 +77,7 @@
             // |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
             // |                |       |  LEFT  |  DOWN  |   RIGHT  |   END    |       |  END    |   LEFT   |   DOWN  |  RIGHT  |          |             |
             // |----------------+-------+--------+--------+----------+----------|       |---------+----------+---------+---------+----------+-------------|
-            // |     OUT_TOG    |       |        |        |CTRL+LEFT |CTRL+RIGHT|       |CTRL+LEFT|CTRL+RIGHT|         |         |          |   OUT_TOG   |
+            // |     OUT_TOG    |       |        |        |CTRL+LEFT |CTRL+RIGHT|       |CTRL+LEFT|CTRL+RIGHT|   del  |         |          |   OUT_TOG   |
             // '---------------------------------+--------+----------+----------+       |---------+----------+---------+----------------------------------'
             //                                   |  GUI   |   MO3    |          |       |         |          |         |
             //                                   '--------+----------+----------'       '---------+----------+---------'
@@ -131,11 +92,11 @@
 
         adjust_layer {
             // .--------------------------------------------------------.       .--------------------------------------------------------------.
-            // |         |        |        |        |         |         |       |  VOL+  |        |         |         |          |             |
+            // |         |  F1    |   F2   |   F3   |   F4   |   F5   |       |  VOL+  |        |         |         |          |             |
             // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-            // |  BTCLR  |  BT1   |  BT2   |  BT3   |  BT4    |  BT5    |       |  VOL-  |        |         |         |          |             |
+            // |         |  F6    |  F7    |  F8   |   F9    | F10    |       |  VOL-  |        |         |         |          |             |
             // |---------+--------+--------+--------+---------+---------|       |--------+--------+---------+---------+----------+-------------|
-            // |         |        |        |        |         |         |       |        |        |         |         |          |             |
+            // |  BTCLR  |  BT1   |  BT2   |  BT3   |   F11   |  F12   |       |        |        |         |         |          |             |
             // '---------------------------+--------+---------+---------+       |--------+--------+---------+----------------------------------'
             //                             |        |         |         |       |        |        |         |
             //                             '--------+---------+---------'       '--------+--------+---------'
